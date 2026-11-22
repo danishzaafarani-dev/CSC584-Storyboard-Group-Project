@@ -1,0 +1,19 @@
+.page{padding:48px 9%;min-height:60vh}.narrow{max-width:480px;margin:0 auto}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.page h1{font:800 30px Manrope;color:var(--navy);letter-spacing:-.8px;margin:0 0 8px}.page .muted{font-size:13px}
+label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:13px;background:#fff}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+button.btn{border:0;cursor:pointer;margin-top:20px;width:100%;justify-content:center}
+.tabs{display:flex;gap:8px;margin-bottom:6px}.tabs button{flex:1;padding:11px;border:1px solid var(--line);background:#fff;border-radius:9px;font:700 13px 'DM Sans';cursor:pointer;color:#64748b}.tabs button.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:22px 0}.filters label{margin:0 0 4px}
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}.detail .product-image{height:320px;border-radius:14px}
+.facts{display:grid;gap:6px;font-size:13px;color:var(--muted);margin:14px 0}.price{font:800 28px Manrope;color:var(--navy)}
+.radio{display:flex;gap:18px;margin-top:6px}.radio label{display:flex;gap:6px;align-items:center;margin:0;font-weight:600}.radio input{width:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}th,td{padding:14px;border-bottom:1px solid var(--line);text-align:left}th{font-size:11px;color:var(--muted);background:#f5f8fc}
+.status{padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;background:#fff4d8;color:#8b6413}.status.ok{background:#e9f5ef;color:#218767}.status.no{background:#fde8e8;color:#b42318}
+.mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 11px;font:700 12px 'DM Sans';cursor:pointer;margin-right:4px}.mini.go{background:var(--blue);color:#fff;border-color:var(--blue)}
+.wrap{overflow-x:auto}.empty{display:none;padding:30px;text-align:center;color:var(--muted)}
+.board{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px}.scene{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.scene h3{font:700 14px Manrope;color:var(--navy);margin:0}.scene p{font-size:11px;color:var(--muted);margin:0;line-height:1.5}.wire{height:130px;border:1px dashed #9bbce8;border-radius:10px;background:#f5f9ff;padding:10px;display:flex;flex-direction:column;gap:6px}
+.wire i{display:block;height:10px;background:#dce9fa;border-radius:4px}.wire i.s{width:55%}.wire i.b{height:22px;background:var(--blue);width:45%}.wire i.g{height:38px}.wire .row{display:flex;gap:6px}.wire .row i{flex:1;height:50px}
+@media(max-width:800px){.detail,.filters{grid-template-columns:1fr}.board{grid-template-columns:1fr 1fr}.page{padding:36px 6%}}@media(max-width:520px){.board{grid-template-columns:1fr}}

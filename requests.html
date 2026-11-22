@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My requests | Campus Bazaar</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css"></head><body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a>
+<nav><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="requests.html">My requests</a><a href="storyboard.html">Storyboard</a></nav>
+<div class="nav-actions"><a class="login" href="login.html">Log in</a><a class="btn btn-small" href="sell.html">＋ List an item</a></div></header>
+<main class="page">
+<p class="eyebrow">MANAGE REQUESTS</p><h1>Requests for your items</h1><p class="muted">Accept or reject, then mark complete after meeting on campus.</p><br>
+<div class="wrap"><table><thead><tr><th>Item</th><th>Buyer</th><th>Type</th><th>Meeting place</th><th>Status</th><th>Action</th></tr></thead><tbody>
+<tr><td>Everyday Backpack</td><td>Hafiz</td><td>PURCHASE</td><td>Library entrance</td><td><span class="status">PENDING</span></td><td></td></tr>
+<tr><td>Scientific Calculator</td><td>Mei Ling</td><td>EXCHANGE (for USB-C Hub)</td><td>Student centre</td><td><span class="status">PENDING</span></td><td></td></tr>
+</tbody></table></div>
+<script>
+document.querySelectorAll('tbody tr').forEach(tr=>{const s=tr.querySelector('.status'),a=tr.lastElementChild;
+function pending(){a.innerHTML='<button class="mini go">Accept</button><button class="mini">Reject</button>';a.children[0].onclick=()=>set('ACCEPTED','ok');a.children[1].onclick=()=>set('REJECTED','no')}
+function set(t,k){s.textContent=t;s.className='status '+k;a.innerHTML='';if(t==='ACCEPTED'){a.innerHTML='<button class="mini go">Mark completed</button>';a.firstChild.onclick=()=>set('COMPLETED','ok')}}
+pending()});
+</script>
+</main>
+<footer><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a><p>Student-to-student exchange. Reuse more, spend less.</p><small>© 2026 Campus Bazaar — Group Project Prototype</small></footer>
+</body></html>

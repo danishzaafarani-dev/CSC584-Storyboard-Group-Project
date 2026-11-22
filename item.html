@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Item details | Campus Bazaar</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css"></head><body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a>
+<nav><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="requests.html">My requests</a><a href="storyboard.html">Storyboard</a></nav>
+<div class="nav-actions"><a class="login" href="login.html">Log in</a><a class="btn btn-small" href="sell.html">＋ List an item</a></div></header>
+<main class="page">
+<div class="detail">
+<div class="product-image book-bg"><span class="pill">Textbook</span><span class="product-emoji" style="font-size:120px">📘</span></div>
+<div><p class="condition">GOOD CONDITION · AVAILABLE</p><h1>Database System Concepts</h1>
+<div class="price">RM 35.00</div>
+<div class="facts"><span>Seller: Aina (Shah Alam campus)</span><span>Category: Textbooks</span><span>Listed: 20 Nov 2026</span></div>
+<p class="muted">Clean copy with light highlighting in chapters 1–5. No torn pages.</p>
+<form class="card" onsubmit="alert('Request sent. Status: PENDING');location='requests.html';return false">
+<strong>Request this item</strong>
+<div class="radio"><label><input type="radio" name="t" value="PURCHASE" checked> Purchase</label><label><input type="radio" name="t" value="EXCHANGE"> Exchange</label></div>
+<div id="ex" hidden><label for="off">Item you offer</label><select id="off"><option>Scientific Calculator (my listing)</option><option>Desk Lamp (my listing)</option></select></div>
+<label for="loc">Meeting location</label><input id="loc" placeholder="e.g. Library entrance" required>
+<button class="btn" type="submit">Send request</button></form></div></div>
+<script>document.querySelectorAll('[name=t]').forEach(r=>r.onchange=()=>document.getElementById('ex').hidden=r.value!=='EXCHANGE'||!r.checked)</script>
+</main>
+<footer><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a><p>Student-to-student exchange. Reuse more, spend less.</p><small>© 2026 Campus Bazaar — Group Project Prototype</small></footer>
+</body></html>

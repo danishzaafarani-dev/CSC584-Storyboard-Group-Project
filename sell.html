@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>List an item | Campus Bazaar</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css"></head><body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a>
+<nav><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="requests.html">My requests</a><a href="storyboard.html">Storyboard</a></nav>
+<div class="nav-actions"><a class="login" href="login.html">Log in</a><a class="btn btn-small" href="sell.html">＋ List an item</a></div></header>
+<main class="page">
+<div class="narrow card"><h1>List an item</h1><p class="muted">Fill in the details so other students can find it.</p>
+<form onsubmit="alert('Listing saved (prototype).');location='marketplace.html';return false">
+<label for="n">Item name</label><input id="n" required maxlength="120">
+<label for="c">Category</label><select id="c"><option>Textbooks</option><option>Tech &amp; Gadgets</option><option>Campus Gear</option><option>Others</option></select>
+<label for="co">Condition</label><select id="co"><option value="NEW">New</option><option value="LIKE_NEW">Like new</option><option value="GOOD" selected>Good</option><option value="FAIR">Fair</option></select>
+<label for="pr">Price (RM)</label><input id="pr" type="number" min="0" step="0.01" required>
+<label for="de">Description</label><textarea id="de" rows="4"></textarea>
+<label for="im">Photo</label><input id="im" type="file" accept="image/*">
+<button class="btn" type="submit">Publish listing</button></form></div>
+</main>
+<footer><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a><p>Student-to-student exchange. Reuse more, spend less.</p><small>© 2026 Campus Bazaar — Group Project Prototype</small></footer>
+</body></html>

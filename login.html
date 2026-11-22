@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Log in | Campus Bazaar</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css"></head><body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a>
+<nav><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="requests.html">My requests</a><a href="storyboard.html">Storyboard</a></nav>
+<div class="nav-actions"><a class="login" href="login.html">Log in</a><a class="btn btn-small" href="sell.html">＋ List an item</a></div></header>
+<main class="page">
+<div class="narrow card">
+<h1>Welcome back</h1><p class="muted">Log in or register with your student details.</p>
+<div class="tabs"><button type="button" id="tl" class="on">Log in</button><button type="button" id="tr">Register</button></div>
+<form id="fl" onsubmit="location='marketplace.html';return false">
+<label for="e1">Student email</label><input id="e1" type="email" required>
+<label for="p1">Password</label><input id="p1" type="password" required>
+<button class="btn" type="submit">Log in</button></form>
+<form id="fr" hidden onsubmit="alert('Account created (prototype).');location='marketplace.html';return false">
+<label for="sid">Student ID</label><input id="sid" required maxlength="20">
+<label for="fn">Full name</label><input id="fn" required maxlength="100">
+<label for="e2">Student email</label><input id="e2" type="email" required>
+<label for="ph">Phone</label><input id="ph" type="tel">
+<label for="cp">Campus</label><input id="cp" required value="Shah Alam">
+<label for="p2">Password</label><input id="p2" type="password" required minlength="8">
+<button class="btn" type="submit">Create account</button></form></div>
+<script>
+const tl=document.getElementById('tl'),tr=document.getElementById('tr'),fl=document.getElementById('fl'),fr=document.getElementById('fr');
+function show(l){fl.hidden=!l;fr.hidden=l;tl.classList.toggle('on',l);tr.classList.toggle('on',!l)}
+tl.onclick=()=>show(true);tr.onclick=()=>show(false);
+</script>
+</main>
+<footer><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a><p>Student-to-student exchange. Reuse more, spend less.</p><small>© 2026 Campus Bazaar — Group Project Prototype</small></footer>
+</body></html>

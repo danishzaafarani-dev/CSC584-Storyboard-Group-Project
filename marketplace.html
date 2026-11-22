@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Marketplace | Campus Bazaar</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css"></head><body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a>
+<nav><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="requests.html">My requests</a><a href="storyboard.html">Storyboard</a></nav>
+<div class="nav-actions"><a class="login" href="login.html">Log in</a><a class="btn btn-small" href="sell.html">＋ List an item</a></div></header>
+<main class="page">
+<p class="eyebrow">MARKETPLACE</p><h1>Find your next pre-loved item</h1><p class="muted">Search by name or filter by category.</p>
+<div class="filters">
+<div><label for="q">Search</label><input id="q" type="search" placeholder="e.g. calculator"></div>
+<div><label for="cat">Category</label><select id="cat"><option value="">All categories</option><option>Textbook</option><option>Gadget</option><option>Campus gear</option><option>Others</option></select></div>
+<div><label for="cond">Condition</label><select id="cond"><option value="">Any</option><option>NEW</option><option>LIKE NEW</option><option>GOOD</option><option>FAIR</option></select></div></div>
+<div class="product-grid" id="grid"></div><p class="empty" id="none">No items match your search. Try another keyword or category.</p>
+<script>
+const items=[["Database System Concepts","Textbook","GOOD",35,"📘","book-bg","Aina"],["Scientific Calculator","Gadget","LIKE NEW",28,"🧮","calc-bg","Danish"],["Everyday Backpack","Campus gear","GOOD",25,"🎒","bag-bg","Farah"],["Networking Notes Bundle","Textbook","FAIR",12,"📝","book-bg","Hafiz"],["USB-C Hub","Gadget","LIKE NEW",40,"🔌","calc-bg","Mei Ling"],["Desk Lamp","Others","GOOD",18,"💡","bag-bg","Arjun"]];
+const g=document.getElementById('grid'),q=document.getElementById('q'),c=document.getElementById('cat'),d=document.getElementById('cond');
+function draw(){const t=q.value.toLowerCase();g.innerHTML='';let n=0;
+items.filter(i=>i[0].toLowerCase().includes(t)&&(!c.value||i[1]===c.value)&&(!d.value||i[2]===d.value)).forEach(i=>{n++;
+g.insertAdjacentHTML('beforeend',`<article class="product"><div class="product-image ${i[5]}"><span class="pill">${i[1]}</span><span class="product-emoji">${i[4]}</span></div><div class="product-info"><p class="condition">${i[2]}</p><h3>${i[0]}</h3><p class="seller">Listed by ${i[6]} · Shah Alam</p><div class="product-bottom"><strong>RM ${i[3].toFixed(2)}</strong><a href="item.html">View item →</a></div></div></article>`)});
+document.getElementById('none').style.display=n?'none':'block'}
+[q,c,d].forEach(e=>e.addEventListener('input',draw));draw();
+</script>
+</main>
+<footer><a class="brand" href="index.html"><span class="brand-mark">CB</span> Campus<span>Bazaar</span></a><p>Student-to-student exchange. Reuse more, spend less.</p><small>© 2026 Campus Bazaar — Group Project Prototype</small></footer>
+</body></html>
